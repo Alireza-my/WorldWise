@@ -1,112 +1,16 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "PT",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
+      "cityName": "Cuevas de Almuden",
       "country": "Spain",
       "emoji": "ES",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2023-07-11T13:52:47.709Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "40.73893324113603",
+        "lng": "-0.8020019531250001"
       },
-      "id": 17806751
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "DE",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Nijar",
-      "country": "Spain",
-      "emoji": "ES",
-      "date": "2023-04-03T07:47:59.202Z",
-      "notes": "",
-      "position": {
-        "lat": "36.967508314568164",
-        "lng": "-2.13128394200588"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Rubielos de la Cerida",
-      "country": "Spain",
-      "emoji": "ES",
-      "date": "2023-07-11T13:37:19.845Z",
-      "notes": "",
-      "position": {
-        "lat": "40.763901280945866",
-        "lng": "-1.2469482421875002"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Rubielos de la Cerida",
-      "country": "Spain",
-      "emoji": "ES",
-      "date": "2023-07-11T13:37:19.845Z",
-      "notes": "",
-      "position": {
-        "lat": "40.763901280945866",
-        "lng": "-1.2469482421875002"
-      },
-      "id": 98443200
-    },
-    {
-      "cityName": "Al Kharjah",
-      "country": "Egypt",
-      "emoji": "EG",
-      "date": "2023-07-11T13:37:59.055Z",
-      "notes": "",
-      "position": {
-        "lat": "25.799891182088334",
-        "lng": "31.816406250000004"
-      },
-      "id": 98443201
-    },
-    {
-      "cityName": "Oualata",
-      "country": "Mauritania",
-      "emoji": "MR",
-      "date": "2023-07-11T13:38:05.196Z",
-      "notes": "",
-      "position": {
-        "lat": "18.47960905583198",
-        "lng": "-8.085937500000002"
-      },
-      "id": 98443202
-    },
-    {
-      "cityName": "Kabambare",
-      "country": "Congo (the Democratic Republic of the)",
-      "emoji": "CD",
-      "date": "2023-07-11T13:38:09.693Z",
-      "notes": "",
-      "position": {
-        "lat": "-4.565473550710278",
-        "lng": "27.421875000000004"
-      },
-      "id": 98443203
+      "id": 1
     }
   ]
 }
