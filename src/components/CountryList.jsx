@@ -3,12 +3,13 @@ import styles from "./CountryList.module.css";
 import Spinner from "./Spinner";
 import Message from "./Message";
 import { useCities } from "../contexts/CitiesContext";
+import { convertToEmoji } from "./Form";
 
 function CountryList() {
   const { cities, isLoading } = useCities();
 
   if (isLoading) return <Spinner />;
-
+  console.log(cities);
   if (!cities.length)
     return <Message message="Add your first city by clicking on the map" />;
 
@@ -18,12 +19,7 @@ function CountryList() {
         ...arr,
         {
           country: city.country,
-          emoji: (
-            <img
-              src={`https://flagsapi.com/${city.emoji}/flat/32.png`}
-              alt={city.emoji}
-            />
-          ),
+          emoji: convertToEmoji(city.emoji),
         },
       ];
     else return arr;

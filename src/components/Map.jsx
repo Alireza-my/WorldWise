@@ -7,18 +7,24 @@ import {
   Marker,
   Popup,
   useMap,
-  useMapEvent,
+  useMapEvents,
 } from "react-leaflet";
 import { useCities } from "../contexts/CitiesContext";
+import { useGeolocation } from "../hooks/useGeolocation";
+import Button from "./Button";
+import { useUrlPosition } from "../hooks/useUrlPosition";
+import { convertToEmoji } from "./Form";
 
 function Map() {
   const { cities } = useCities();
-
   const [mapPosition, setMapPosition] = useState([40, 0]);
+  const {
+    isLoading: isLoadingPosition,
+    position: geolocationPosition,
+    getPosition,
+  } = useGeolocation();
 
-  const [searchParams] = useSearchParams();
-  const mapLat = searchParams.get("lat");
-  const mapLng = searchParams.get("lng");
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(
     function () {
@@ -27,13 +33,26 @@ function Map() {
     [mapLat, mapLng]
   );
 
+  useEffect(
+    function () {
+      if (geolocationPosition)
+        setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+    },
+    [geolocationPosition]
+  );
+
   return (
     <div className={styles.mapContainer}>
+      {!geolocationPosition && (
+        <Button type="position" onClick={getPosition}>
+          {isLoadingPosition ? "Loading..." : "Use your position"}
+        </Button>
+      )}
       <MapContainer
         center={mapPosition}
         zoom={8}
         scrollWheelZoom={true}
-        className={styles.mapContainer}
+        className={styles.map}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -45,10 +64,7 @@ function Map() {
             key={city.id}
           >
             <Popup>
-              <img
-                src={`https://flagsapi.com/${city.emoji}/flat/16.png`}
-                alt={city.emoji}
-              />
+              {convertToEmoji(city.emoji)}
               <span>{city.cityName}</span>
             </Popup>
           </Marker>
@@ -70,9 +86,9 @@ function ChangeCenter({ position }) {
 function DetectClick() {
   const navigate = useNavigate();
 
-  useMapEvent({
+  useMapEvents({
     click: (e) => {
-      navigate(`form?lat=${e.latlng.lat}&${e.latlng.lng}`);
+      navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
     },
   });
 }
