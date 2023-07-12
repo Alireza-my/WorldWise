@@ -1,16 +1,3 @@
 {
-  "cities": [
-    {
-      "cityName": "Cuevas de Almuden",
-      "country": "Spain",
-      "emoji": "ES",
-      "date": "2023-07-11T13:52:47.709Z",
-      "notes": "",
-      "position": {
-        "lat": "40.73893324113603",
-        "lng": "-0.8020019531250001"
-      },
-      "id": 1
-    }
-  ]
+  "cities": []
 }
