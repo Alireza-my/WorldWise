@@ -1,3 +1,16 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "cityName": "Teruel",
+      "country": "Spain",
+      "emoji": "ES",
+      "date": "2023-07-13T12:37:36.117Z",
+      "notes": "",
+      "position": {
+        "lat": "40.34235741658335",
+        "lng": "-1.0821533203125002"
+      },
+      "id": 1
+    }
+  ]
 }
