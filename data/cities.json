@@ -11,6 +11,42 @@
         "lng": "-1.0821533203125002"
       },
       "id": 1
+    },
+    {
+      "cityName": "Huerta del Rey",
+      "country": "Spain",
+      "emoji": "ES",
+      "date": "2023-07-16T07:02:26.528Z",
+      "notes": "",
+      "position": {
+        "lat": "41.811710434169875",
+        "lng": "-3.1860351562500004"
+      },
+      "id": 2
+    },
+    {
+      "cityName": "Nur",
+      "country": "Iran (Islamic Republic of)",
+      "emoji": "IR",
+      "date": "2023-07-16T07:03:57.853Z",
+      "notes": "",
+      "position": {
+        "lat": "36.5453887392006",
+        "lng": "52.042236328125"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Carboneras de Guadazaon",
+      "country": "Spain",
+      "emoji": "ES",
+      "date": "2023-07-16T07:12:57.421Z",
+      "notes": "",
+      "position": {
+        "lat": "39.854442721817236",
+        "lng": "-1.8127441406250002"
+      },
+      "id": 4
     }
   ]
 }
